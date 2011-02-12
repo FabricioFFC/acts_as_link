@@ -13,8 +13,8 @@ describe Link do
       lambda{Link.new('')}.should raise_error(RuntimeError,/Link is not an url/)
     end
     
-    it 'should return an exception when try to initialize with a number' do
-      lambda{Link.new('123')}.should raise_error(RuntimeError,/Link is not an url/)
+    it 'should return an exception when try to initialize with a string is not a link' do
+      lambda{Link.new('test.com.br')}.should raise_error(RuntimeError,/Link is not an url/)
     end
     
   end
