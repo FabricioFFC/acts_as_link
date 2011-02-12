@@ -1,0 +1,9 @@
+h1. act_as_link
+
+h2. Maintainers
+
+* Fabrício Campos ("github.com/FabricioFFC":http://github.com/FabricioFFC)
+
+h2. How to collaborate
+
+If you would collaborate, you can create a fork, apply the modification and submit a pull request :)
