@@ -1,4 +1,18 @@
-h1. act_as_link
+h1. ActsAsLink
+
+h2. Installation
+
+pre. gem install acts_as_link
+
+h2. Example
+
+<pre>
+    require 'rubygems'
+    require 'acts_as_link'
+    
+    link = Link.new('http://google.com')
+    link.is_broken? #false
+</pre>
 
 h2. Maintainers
 

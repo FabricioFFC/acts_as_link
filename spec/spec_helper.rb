@@ -1,1 +1,1 @@
-Dir["lib/act_as_link/*.rb"].each {|file| require file }
+Dir["lib/acts_as_link/*.rb"].each {|file| require file }

@@ -1,11 +1,11 @@
 Gem::Specification.new do |s|
-  s.name        = "act_as_link"
+  s.name        = "acts_as_link"
   s.version     = "0.0.1"
   s.author      = "Fabrício Ferrari de Campos"
   s.email       = "fabricio@vizir.com.br"
-  s.homepage    = "http://github.com/fabricioffc/act_as_link"
-  s.summary     = "An easy way to make your link act as link"
-  s.description = "For now only is_broken? method."
+  s.homepage    = "http://github.com/fabricioffc/acts_as_link"
+  s.summary     = "An easy way to make your link acts as link"
+  s.description = "For now only verification if link is broken"
 
   s.files        = Dir["{lib,spec}/**/*"]
   s.require_path = "lib"
