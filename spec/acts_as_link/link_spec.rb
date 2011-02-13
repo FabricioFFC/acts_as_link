@@ -32,4 +32,35 @@ describe Link do
     end
     
   end
+  
+  describe 'is_an_image?' do
+    
+    it 'should return true when url links to an image' do
+      link = Link.new('http://www.google.com/images/srpr/nav_logo35.png')
+      link.is_an_image?.should be_true
+    end
+    
+    it 'should return false when url does not link to an image' do
+      link = Link.new('http://www.google.com')
+      link.is_an_image?.should be_false
+    end
+    
+    it 'should return false when url links to a pdf file' do
+      link = Link.new('http://qualidadebr.files.wordpress.com/2009/06/livro-qualidadebr.pdf')
+      link.is_an_image?.should be_false
+    end
+    
+    it 'should return false when url extension image is not in the end' do
+      link = Link.new('http://www.google.com/images/srpr/nav_.pnglogo35')
+      link.is_an_image?.should be_false
+    end
+    
+    it 'should return true for all image extensions defined' do
+      Link::IMAGE_EXTENSIONS.each do |ext|
+        link = Link.new("http://www.google.com/images/srpr/nav_logo35#{ext}")
+        link.is_an_image?.should be_true
+      end
+    end
+    
+  end
 end
