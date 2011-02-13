@@ -1,5 +1,13 @@
 h1. ActsAsLink
 
+ActsAsLink provides: 
+
+* verification if a link is broken; 
+* verification if a link is to an image;
+* shortening links with bit.ly. 
+
+Enjoy! ;)
+
 h2. Installation
 
 pre. gem install acts_as_link
@@ -13,6 +21,7 @@ require 'acts_as_link'
 link = Link.new('http://google.com')
 link.is_broken?     #false
 link.is_an_image?   #false
+link.shorten        #"http://bit.ly/esVFpo"
 </pre>
 
 h2. Maintainers

@@ -63,4 +63,13 @@ describe Link do
     end
     
   end
+  
+  describe 'shorten' do
+    
+    it 'should return shortened link' do
+      link = Link.new('http://www.google.com')
+      link.shorten.include?('bit.ly').should be_true
+    end
+    
+  end
 end

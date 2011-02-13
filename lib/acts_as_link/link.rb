@@ -1,5 +1,7 @@
 require 'net/http'
 require 'uri'
+require 'rubygems'
+require 'bitly'
 
 class Link
   
@@ -18,6 +20,10 @@ class Link
   def is_an_image?
     extension = get_extension(@uri.to_s)
     verify_if_extension_is_an_image(extension)
+  end
+  
+  def shorten
+    shorten_link_with_bitly(@uri.to_s)    
   end
   
 private 
@@ -56,6 +62,12 @@ private
       break if is_an_image
     end
     is_an_image
+  end
+  
+  def shorten_link_with_bitly(link)
+    Bitly.use_api_version_3
+    bitly = Bitly.new('actsaslink', 'R_fc70af6573e064c0f4081317bb592f18')
+    bitly.shorten(link).short_url
   end
     
 end
