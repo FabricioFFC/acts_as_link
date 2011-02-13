@@ -11,7 +11,8 @@ require 'rubygems'
 require 'acts_as_link'
 
 link = Link.new('http://google.com')
-link.is_broken? #false
+link.is_broken?     #false
+link.is_an_image?   #false
 </pre>
 
 h2. Maintainers
