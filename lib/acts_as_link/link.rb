@@ -9,7 +9,7 @@ class Link
   
   def initialize(url)
     @uri = URI.parse(url)
-    raise 'Link is not an url' if @uri.class != URI::HTTP
+    raise 'Link is not an url' if (@uri.class != URI::HTTP && @uri.class != URI::HTTPS)
   end  
   
   def is_broken?

@@ -9,6 +9,11 @@ describe Link do
       link.instance_variable_get('@uri').should_not be_nil
     end
     
+    it 'should initialize with uri variable defined when link has https' do
+      link = Link.new('https://rubygems.org/gems/acts_as_link')
+      link.instance_variable_get('@uri').should_not be_nil
+    end
+    
     it 'should return an exception when try to initialize with an empty string' do
       lambda{Link.new('')}.should raise_error(RuntimeError,/Link is not an url/)
     end

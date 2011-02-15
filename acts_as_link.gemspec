@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "acts_as_link"
-  s.version     = "0.0.3"
+  s.version     = "0.0.4"
   s.author      = "Fabrício Ferrari de Campos"
   s.email       = "fabricio@vizir.com.br"
   s.homepage    = "http://github.com/fabricioffc/acts_as_link"
