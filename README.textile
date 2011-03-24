@@ -1,10 +1,10 @@
 h1. ActsAsLink
 
-ActsAsLink provides: 
+ActsAsLink provides:
 
-* verification if a link is broken; 
+* verification if a link is broken;
 * verification if a link is to an image;
-* shortening links with bit.ly. 
+* shortening links with bit.ly.
 
 Enjoy! ;)
 
@@ -18,7 +18,7 @@ h2. Example
 require 'rubygems'
 require 'acts_as_link'
 
-link = Link.new('http://google.com')
+link = ActsAsLink::Link.new('http://google.com')
 link.is_broken?     #false
 link.is_an_image?   #false
 link.shorten        #"http://bit.ly/esVFpo"
@@ -31,3 +31,4 @@ h2. Maintainers
 h2. How to collaborate
 
 If you would collaborate, you can create a fork, apply the modification and submit a pull request :)
+
